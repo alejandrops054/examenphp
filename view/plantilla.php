@@ -13,7 +13,23 @@
 <body>
     <?php 
         include "componets/menu.php";
+        
+
+        //rutas 
+        if(isset($_GET["ruta"])){
+            if($_GET["ruta"] == "inicio" ||
+               $_GET["ruta"] == "categorias" ||
+               $_GET["ruta"] == "404"){
+                include "componets/".$_GET["ruta"].".php";
+               }else{
+                include "componets/404.php";
+               }
+        }else{
+            include "componets/inicio.php";
+        }
     ?>
-    <p>prueba</p>
+
+    <script src="view/js/simuladorAxios.js"></script>
+    <script src="view/js/categorias.js"></script>
 </body>
 </html>

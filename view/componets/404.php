@@ -1,3 +1,4 @@
 <div class="container-fluid">
-  <h3>Menu prueba</h3>
+  <h3>404</h3>
+  <p>ooops</p>
 </div>
