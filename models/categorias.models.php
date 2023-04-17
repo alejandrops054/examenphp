@@ -38,7 +38,7 @@ class ModelsCategoria{
 
     //Actulizar Categorias
     static public function mdlActualizarCategoria($tabla, $datos){
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET categoria = :categoria,  ruta = :ruta, estado = :estado, WHERE id = :id");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET categoria = :categoria,  ruta = :ruta, estado = :estado WHERE id = :id");
         $stmt->bindParam(":categoria", $datos["categoria"], PDO::PARAM_STR);
         $stmt->bindParam(":ruta", $datos["ruta"],PDO::PARAM_STR);
         $stmt->bindParam(":estado", $datos["estado"],PDO::PARAM_STR);
