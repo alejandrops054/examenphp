@@ -21,6 +21,7 @@
         if(isset($_GET["ruta"])){
             if($_GET["ruta"] == "inicio" ||
                $_GET["ruta"] == "categorias" ||
+               $_GET["ruta"] == "subcategoria" ||
                $_GET["ruta"] == "404"){
                 include "componets/".$_GET["ruta"].".php";
                }else{
@@ -33,5 +34,6 @@
 
     <script src="view/js/simuladorAxios.js"></script>
     <script src="view/js/categorias.js"></script>
+    <script src="view/js/subcategorias.js"></script>
 </body>
 </html>
